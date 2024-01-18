@@ -12,8 +12,10 @@
     "url": "https://github.com/jackyzha0/quartz.git"
   },
   "scripts": {
-    "docs": "npx quartz build --serve -d docs",
+    "update": "npx quartz sync --no-pull",
     "check": "tsc --noEmit && npx prettier . --check",
+    "build": "npx quartz build",
+    "dev": "npx quartz build --serve",
     "format": "npx prettier . --write",
     "test": "tsx ./quartz/util/path.test.ts",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1"
